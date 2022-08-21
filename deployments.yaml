@@ -16,7 +16,7 @@ spec:
         app: servicea
     spec:
       containers:
-      - image: service-a-node-web-app
+      - image: grozavlad/service-a-node-web-app
         name: servicea
         imagePullPolicy: IfNotPresent
 ---
@@ -52,7 +52,7 @@ spec:
         app: serviceb
     spec:
       containers:
-      - image: service-b-node-web-app
+      - image: grozavlad/service-b-node-web-app
         name: serviceb
         imagePullPolicy: IfNotPresent
 ---

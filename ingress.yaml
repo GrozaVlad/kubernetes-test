@@ -3,12 +3,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: servicea
+  annotations: 
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: servicea.127.0.0.1.nip.io
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /servicea
             pathType: Prefix
             backend:
               service:
@@ -20,12 +22,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: serviceb
+  annotations: 
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: serviceb.127.0.0.1.nip.io
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /serviceb
             pathType: Prefix
             backend:
               service:
