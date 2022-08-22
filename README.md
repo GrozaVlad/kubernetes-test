@@ -6,7 +6,7 @@
 
 3. Create a new resource group with the command _**az group create --location $LOCATION --name $RESOURCE_GROUP_NAME**_
 
-4. Download the right utility foir your operating system for the aks engine from [_here_](https://github.com/Azure/aks-engine/releases/tag/v0.70.1). Save it in the root of the project
+4. Download the right utility for your operating system for the aks engine from [_here_](https://github.com/Azure/aks-engine/releases/tag/v0.70.1). Save it in the root of the project
 
 5. You will need to generate the cluster with the following command:
 
